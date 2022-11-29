@@ -261,12 +261,11 @@ margin: 0rem !important;
             <div class="popup-head">Payment Information</div>
             <div class="form_popup">
               <div class="form-block-2 w-form">
-                <form id="email-form" name="email-form" data-name="Email Form" class="form_popup-component" action="/.netlify/functions/charge" method="post">
+                <form id="payment-form" name="email-form" data-name="Email Form" class="form_popup-component" action="/.netlify/functions/charge" method="post">
                   <div class="form_text-input-wrap"><label for="name" class="form_text-popup">Name *</label><input type="text" class="form_input-popup w-input" maxlength="256" name="name" data-name="Name" placeholder="Enter your Full name" id="name" required></div>
                   <div class="form_text-input-wrap"><label for="Email" class="form_text-popup">Email *</label><input type="email" class="form_input-popup w-input" maxlength="256" name="email" data-name="Email" placeholder="Enter your email address" id="Email" required></div>
                   <div class="form_text-input-wrap"><label for="name-3" class="form_text-popup">Card details*</label>
-                    <div class="text-field embed w-embed">
-                      <div id="card-element"></div>
+                    <div class="form_input-popup w-input" id="card-element">
                     </div>
                   </div>
                   <div class="duplicate-btn"><input id="eventSix" type="submit" value="Submit" data-wait="Please wait..." class="button is-form-submit popup-btn w-button"></div>
@@ -341,6 +340,7 @@ margin: 0rem !important;
     fbq('trackCustom', 'Early Access Page Submit Button Click', { eventID: '6' });
   });      
 </script>
+
 <script>
   //strpe payment
 

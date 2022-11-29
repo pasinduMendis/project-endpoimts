@@ -2,14 +2,11 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const cookie = require('cookie');
 
 exports.handler = async (event, context) => {
-  console.log("work1")
-
+  
   const name = event.body.split("name=")[1].split("&email=")[0].replaceAll('+', ' ');
   const email = decodeURIComponent(event.body.split("email=")[1].split("&stripeToken=")[0]);
   const stripeToken = event.body.split("stripeToken=")[1];
   const myCookie = cookie.serialize('emailHash', email);
-  //console.log(stripeToken)
-  console.log("work2")
 
   try {
     const token = stripeToken;
